@@ -4,14 +4,11 @@ import geb.spock.GebReportingSpec
 
 class DragAndDropFunctionalSpec extends GebReportingSpec {
 
-	def 'Main page is accessible'() {
+	def 'Drags and drops with jQuery UI'() {
 		when:
 		go 'http://jqueryui.com/resources/demos/droppable/default.html'
 
-		then:
-		sleep 2000
-
-		when:
+		and:
 		def draggable = $('#draggable')
 		def droppable = $('#droppable')
 
